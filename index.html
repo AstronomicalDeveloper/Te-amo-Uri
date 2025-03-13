@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Turno de Matrícula</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        #resultado {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Calculadora de Turno de Matrícula</h2>
+    <p>Ingrese su promedio ponderado:</p>
+    <input type="number" id="promedio" step="0.01" placeholder="Ejemplo: 16.5">
+    <br>
+    <button onclick="calcularTurno()">Calcular Turno</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcularTurno() {
+            let promedio = parseFloat(document.getElementById("promedio").value);
+            let turno = "";
+
+            if (promedio >= 18) {
+                turno = "Primer turno";
+            } else if (promedio >= 15) {
+                turno = "Segundo turno";
+            } else if (promedio >= 12) {
+                turno = "Tercer turno";
+            } else {
+                turno = "Último turno";
+            }
+
+            document.getElementById("resultado").innerText = "Su turno de matrícula es: " + turno;
+        }
+    </script>
+
+</body>
+</html>
