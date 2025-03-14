@@ -4,23 +4,22 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <style>
-            #horariosDropdown:hover {
-                background-color: #d4b047 !important; /* Color al pasar el mouse */
-            }
-        </style>
         
         <style>
             .navbar {
                 font-family: 'Poppins', sans-serif; /* Cambia por la fuente que elijas */
             }
-        </style>
-        
 
-        
-        
-        
+            @media (max-width: 768px) {
+                .carousel img {
+                    height: 250px; /* Ajusta la altura en móviles */
+                    object-fit: cover; /* Evita que la imagen se deforme */
+                }
+            }
+            #horariosDropdown:hover {
+                background-color: #d4b047 !important; /* Color al pasar el mouse */
+            }
+        </style>
     </head>
 
     <body>
@@ -77,10 +76,7 @@
                                        Ciencias de la computación</a></li>
                             </ul>
                         </li>
-                        
-                        
-                        
-
+                    
                         <li class="nav-item">
                             <a class="nav-link active btn btn-info w-auto" 
                                href="https://kalriot.github.io/Planififcador-de-horarios_fisi/" 
@@ -101,7 +97,7 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark bg-opacity-50"></div>
-                    <img src="ingresantes.jpg" class="d-block w-100" alt="B24">
+                    <img src="ingresantes.jpg" class="d-block w-100 img-fluid" alt="B24">
                     <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
                         <h3 class="fw-bold">Matrícula 2025-1</h3>
                         <h4>14 de Marzo de 5:00 a.m. a 23:00 p.m</h4>
